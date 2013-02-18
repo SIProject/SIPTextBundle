@@ -1,0 +1,14 @@
+{
+    "name": "sip/text-bundle",
+    "type": "symfony-bundle",
+    "description": "Simple text page using SyliusResourceBundle",
+    "require": {
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "genemu/form-bundle": "2.1.*",
+        "sonata-project/admin-bundle": "master-dev"
+    },
+    "autoload": {
+        "psr-0": { "SIP\\TextBundle": "" }
+    },
+    "target-dir": "SIP/TextBundle"
+}
