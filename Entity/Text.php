@@ -13,19 +13,16 @@ use Gedmo\Mapping\Annotation as Gedmo;
 class Text
 {
     /**
-     * @Gedmo\Versioned
      * @ORM\Column(type="string")
      */
     protected $title;
 
     /**
-     * @Gedmo\Versioned
      * @ORM\Column(type="text")
      */
     protected $body;
 
     /**
-     * @Gedmo\Versioned
      * @ORM\Column(type="string")
      */
     protected $slug;
