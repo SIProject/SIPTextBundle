@@ -1,17 +1,20 @@
 Simple text page bundle
-===========================================
+=======================
 
 Module for create simple text pages with SonataAdmin backend.
 
 Installation
-------------
+============
+
 1. command to add the bundle to your composer.json and download package.
+------------------------------------------------------------------------
 
 ``` bash
 $ composer require "sip/text-bundle": "dev-master"
 ```
 
 2. Enable the bundle inside the kernel.
+---------------------------------------
 
 ``` php
 <?php
@@ -36,6 +39,7 @@ public function registerBundles()
 [Read more about installation SonataAdminBundle](http://sonata-project.org/bundles/admin/master/doc/reference/installation.html#installation)
 
 3. Creating your entity
+-----------------------
 
 ``` php
 <?php
@@ -70,6 +74,7 @@ class Text extends BaseText
 ```
 
 4. Updating database schema
+---------------------------
 
 ``` bash
 $ php app/console doctrine:schema:update --force
@@ -78,6 +83,7 @@ $ php app/console doctrine:schema:update --force
 This should be done only in dev environment! We recommend using Doctrine migrations, to safely update your schema.
 
 5. Importing routing configuration
+----------------------------------
 
 ``` yml
 SIPTextBundle:
@@ -86,11 +92,13 @@ SIPTextBundle:
 ```
 
 6. Templates
+------------
 
 The bundle requires only the show.html template.
 Easiest way to override the view is placing it here app/Resources/SIPTextBundle/views/Text/show.html.twig.
 
 7. Usage
+--------
 
 Create a menu for text pages
 
