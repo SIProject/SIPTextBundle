@@ -19,7 +19,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('class')->defaultValue('SIP\\ResourceBundle\\Entity\\Text')->end()
+                ->scalarNode('model')->cannotBeEmpty()->end()
                 ->scalarNode('controller')->defaultValue('Sylius\\Bundle\\ResourceBundle\\Controller\\ResourceController')->end()
                 ->scalarNode('repository')->defaultValue('Sylius\\Bundle\\ResourceBundle\\Doctrine\\ORM\\EntityRepository')->end()
                 ->scalarNode('admin')->defaultValue('SIP\\TextBundle\\Admin\\TextAdmin')->end()

@@ -28,7 +28,7 @@ class SIPTextExtension extends Extension
         $loader->load('admin.yml');
         $loader->load('services.yml');
 
-        $container->setParameter('sip.text.model.class', $config['class']);
+        $container->setParameter('sip.text.model.class', $config['model']);
         $container->setParameter('sip.text.controller.class', $config['controller']);
         $container->setParameter('sip.text.repository.class', $config['repository']);
         $container->setParameter('sip.text.admin.class', $config['admin']);

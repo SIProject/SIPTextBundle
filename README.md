@@ -91,13 +91,26 @@ SIPTextBundle:
     prefix:   /
 ```
 
-6. Templates
+6. Configuration:
+-----------------
+
+``` yml
+# app/config/config.yml
+sip_text:
+    model: MyBundle\Entity\Text
+    # All Default configuration:
+    # controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+    # repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
+    # admin: SIP\TextBundle\Admin\TextAdmin
+```
+
+7. Templates
 ------------
 
 The bundle requires only the show.html template.
 Easiest way to override the view is placing it here app/Resources/SIPTextBundle/views/Text/show.html.twig.
 
-7. Usage
+8. Usage
 --------
 
 Create a menu for text pages
