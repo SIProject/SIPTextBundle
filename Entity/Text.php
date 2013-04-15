@@ -5,7 +5,6 @@
 namespace SIP\TextBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\MappedSuperclass
@@ -122,5 +121,13 @@ class Text
     public function getDisabled()
     {
         return $this->disabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string)$this->getTitle();
     }
 }
