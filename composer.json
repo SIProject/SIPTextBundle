@@ -4,8 +4,7 @@
     "description": "Simple text page using SyliusResourceBundle",
     "require": {
         "genemu/form-bundle": "2.1.*",
-        "sonata-project/admin-bundle": "master-dev",
-        "sylius/resource-bundle":   "dev-master"
+        "sonata-project/admin-bundle": "master-dev"
     },
     "autoload": {
         "psr-0": { "SIP\\TextBundle": "" }
