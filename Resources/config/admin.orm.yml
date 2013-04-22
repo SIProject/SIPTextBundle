@@ -1,6 +1,6 @@
 services:
     sip.content.text.admin:
-        class: %sip.text.admin.class%
+        class: %sip_text.admin.class%
         tags:
             - { name: sonata.admin, manager_type: orm, audit: false, group: Content, label: Text }
-        arguments: [null, %sip.text.model.class%, SonataAdminBundle:CRUD]
+        arguments: [null, %sip_text.model.class%, SonataAdminBundle:CRUD]

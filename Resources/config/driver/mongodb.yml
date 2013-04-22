@@ -1,0 +1,20 @@
+services:
+    sip_text.default_document_manager.text:
+        factory_service: doctrine.odm.mongodb.document_manager
+        factory_method: getClassMetadata
+        class: Doctrine\ODM\MongoDB\Mapping\ClassMetadata
+        public: false
+        arguments: [%sip_text.model.class%]
+
+    sip_text.unitofwork.text:
+        factory_service: doctrine.odm.mongodb.document_manager
+        factory_method: getUnitOfWork
+        class: Doctrine\ODM\MongoDB\UnitOfWork
+        public: false
+
+    sip_text.manager.text:
+        alias: doctrine.odm.mongodb.document_manager
+
+    sip_text.repository.text:
+        class: %sip_text.repository.class%
+        arguments: [ @sip_text.manager.text, @sip_text.unitofwork.text, @sip_text.default_document_manager.text ]

@@ -1,0 +1,14 @@
+services:
+    sip_text.default_entity_manager.text:
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getClassMetadata
+        class: Doctrine\ORM\Mapping\ClassMetadata
+        public: false
+        arguments: [%sip_text.model.class%]
+
+    sip_text.manager.text:
+        alias: doctrine.orm.entity_manager
+
+    sip_text.repository.text:
+        class: %sip_text.repository.class%
+        arguments: [ @sip_text.manager.text, @sip_text.default_entity_manager.text ]

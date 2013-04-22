@@ -1,0 +1,6 @@
+services:
+    sip_text.controller.text:
+        class: %sip_text.controller.class%
+        arguments: ["sip_text", "text", "SIPTextBundle:Text"]
+        calls:
+            - [ setContainer, [ @service_container ] ]

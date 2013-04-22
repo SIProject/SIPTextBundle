@@ -25,12 +25,13 @@ class SIPTextExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('controller.yml');
         $loader->load("admin.{$config['manager_type']}.yml");
-        $loader->load('services.yml');
+        $loader->load("driver/{$config['manager_type']}.yml");
 
-        $container->setParameter('sip.text.model.class', $config['model']);
-        $container->setParameter('sip.text.controller.class', $config['controller']);
-        $container->setParameter('sip.text.repository.class', $config['repository']);
-        $container->setParameter('sip.text.admin.class', $config['admin']);
+        $container->setParameter('sip_text.model.class', $config['model']);
+        $container->setParameter('sip_text.controller.class', $config['controller']);
+        $container->setParameter('sip_text.repository.class', $config['repository']);
+        $container->setParameter('sip_text.admin.class', $config['admin']);
     }
 }
