@@ -23,6 +23,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('controller')->defaultValue('SIP\\TextBundle\\Controller\\TextController')->end()
                 ->scalarNode('repository')->defaultValue('SIP\\ResourceBundle\\Repository\\EntityRepository')->end()
                 ->scalarNode('admin')->defaultValue('SIP\\TextBundle\\Admin\\TextAdmin')->end()
+                ->scalarNode('manager_type')->defaultValue('orm')->end()
             ->end();
 
         return $treeBuilder;
