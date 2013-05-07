@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class TextController extends Controller
 {
     /**
-     * @Route("/{slug}")
+     * @Route("/{slug}.html")
      * @Template("SIPTextBundle:Text:item.html.twig")
      */
     public function itemAction($slug)
