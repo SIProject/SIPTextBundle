@@ -144,7 +144,7 @@ class Builder extends ContainerAware
         $textPages = $this->getTextRepository()->findBy(array('disabled' => 0));
         foreach ($textPages as $textPage) {
             $child->addChild($textPage->getTitle(), array(
-                'route'           => 'sip_text_item',
+                'route'           => 'sip_text_text_item',
                 'routeParameters' => array(
                     'slug'  => $textPage->getSlug()
                 ),
